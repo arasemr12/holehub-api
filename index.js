@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyparser = require('body-parser');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 //const userModel = require('./models/user');

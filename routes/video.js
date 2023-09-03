@@ -73,7 +73,7 @@ router.post('/create',createLimiter,async(req,res) => {
         let videoIsExist = await checkVideo(id);
         if(!videoIsExist) return res.status(400).json({success:false,message:"Video not found in youtube!"});
         
-        let thumbnail = await getVideoThumbnail(id);
+        //let thumbnail = await getVideoThumbnail(id);
 
         /*let video = await videoModel.create({
             id,
@@ -85,7 +85,7 @@ router.post('/create',createLimiter,async(req,res) => {
             data:{
                 videoId:id,
                 authorId:req.user.id,
-                thumbnail,
+                thumbnail:`https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
                 views:[]
             }
         });
