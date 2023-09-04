@@ -58,7 +58,7 @@ router.get('/news',async(req,res) => {
         }
     });
 
-    find = find.sort((a,b) => b.createdAt-a.createdAt);
+    find = find.sort((a,b) => b.createdAt.getTime()-a.createdAt.getTime());
 
     return res.json({success:true,find});
 });
